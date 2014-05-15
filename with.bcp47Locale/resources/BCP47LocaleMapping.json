@@ -1,0 +1,30 @@
+[
+    {
+        "bcp47Locale": "en-US-x-ES",
+        "countryCode": "ES",
+        "language": "en-US",
+        "locale": "en_US",
+        "cldrLocale": "en-ES"
+    },
+    {
+        "bcp47Locale": "es-ES-x-ES",
+        "countryCode": "ES",
+        "language": "es-ES",
+        "locale": "es_ES",
+        "cldrLocale": "es-ES"
+    },
+    {
+        "bcp47Locale": "fr-FR-x-ER",
+        "countryCode": "ER",
+        "language": "fr-FR",
+        "locale": "fr_XC",
+        "cldrLocale": "fr-ER"
+    },
+    {
+        "bcp47Locale": "en-US-x-US",
+        "countryCode": "US",
+        "language": "en-US",
+        "locale": "en_US",
+        "cldrLocale": "en-US"
+    }
+]
