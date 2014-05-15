@@ -46,7 +46,9 @@
     "passport-local": "^1.0.0",
     "connect-flash": "^0.1.1",
     "paypal-rest-sdk": "^0.6.4",
-    "bundalo": "^0.2.0"
+    "bundalo": "^0.2.0",
+    "debuglog": "^1.0.1",
+    "localeresolver": "~0.1.0"
   },
   "devDependencies": {
     "mocha": "^1.18.0",
