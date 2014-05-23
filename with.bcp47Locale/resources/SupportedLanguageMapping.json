@@ -1,0 +1,18 @@
+{
+    "ES": [
+        "es-ES",
+        "en-US"
+    ],
+    "ER": [
+        "fr-FR",
+        "es-US",
+        "en-US",
+        "zh-Hans-CN"
+    ],
+    "US": [
+        "fr-FR",
+        "es-US",
+        "en-US",
+        "zh-Hans-CN"
+    ]
+}

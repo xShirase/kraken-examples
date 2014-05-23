@@ -22,6 +22,7 @@
             }
         }
     },
+
     "middleware": {
 
         "devtools": {
@@ -33,13 +34,13 @@
                     "path:./public",
                     "path:./.build",
                     {
-                        "dust": {
+                        "template": {
                             "module": "kraken-devtools/plugins/dustjs",
                             "files": "/templates/**/*.js",
                             "base": "templates",
                             "i18n": "config:i18n"
                         },
-                        "less": {
+                        "css": {
                             "module": "kraken-devtools/plugins/less",
                             "files": "/css/**/*.css"
                         },
@@ -52,5 +53,4 @@
             }
         }
     }
-
 }

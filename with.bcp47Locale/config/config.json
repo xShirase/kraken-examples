@@ -55,16 +55,33 @@
             "enabled": true,
             "priority": 140,
             "module": {
-                "name" : "kraken-js/middleware/500",
+                "name": "kraken-js/middleware/500",
                 "arguments": [ "errors/500" ]
             }
         },
-
-        "locale": {
-            "priority": 95,
+        "localeResolver": {
             "enabled": true,
+            "priority": 105,
             "module": {
-                "name": "path:./lib/locale"
+                "name": "localeResolver/lib/localeResolver",
+                "method": "requestHandler",
+                "arguments": [
+                    ["path:../with.bcp47Locale/resources/BCP47LocaleMapping.json",
+                        "path:../with.bcp47Locale/resources/CountryTimeZoneMapping.json",
+                        "path:../with.bcp47Locale/resources/SupportedLanguageMapping.json",
+                        "path:../with.bcp47Locale/resources/g11nProperties.json"],
+                    {
+                        "ruleFile": "path:../with.bcp47Locale/resources/localeResolution.nools",
+                        "localeFactorsModule": "path:../with.bcp47Locale/lib/localeFactors.js"
+                    }
+                ]
+            }
+        },
+        "krakenlocale": {
+            "enabled": true,
+            "priority": 106,
+            "module": {
+                "name": "path:./lib/krakenlocale"
             }
         }
     }
