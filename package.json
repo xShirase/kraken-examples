@@ -14,13 +14,16 @@
     "examples"
   ],
   "author": "Jeff Harrell <jeharrell@paypal.com>",
-  "contributors": [{
-    "name": "Poornima Venkatakrishnan",
-    "email": "pvenkatakrishnan@paypal.com"
-  }, {
-    "name": "Matt Edelman",
-    "email": "medelman@paypal.com"
-  }],
+  "contributors": [
+    {
+      "name": "Poornima Venkatakrishnan",
+      "email": "pvenkatakrishnan@paypal.com"
+    },
+    {
+      "name": "Matt Edelman",
+      "email": "medelman@paypal.com"
+    }
+  ],
   "scripts": {
     "start": "node index.js"
   },
@@ -46,9 +49,9 @@
     "passport-local": "^1.0.0",
     "connect-flash": "^0.1.1",
     "paypal-rest-sdk": "^0.6.4",
-    "bundalo": "^0.2.0",
+    "bundalo": "^0.2.4",
     "debuglog": "^1.0.1",
-    "localeresolver": "~0.1.0"
+    "localeresolver": "^0.1.1"
   },
   "devDependencies": {
     "mocha": "^1.18.0",
