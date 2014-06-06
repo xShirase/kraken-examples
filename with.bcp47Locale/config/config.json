@@ -83,7 +83,16 @@
             "module": {
                 "name": "path:./lib/krakenlocale"
             }
+        },
+
+        "expressView": {
+            "priority": 107,
+            "enabled": true,
+            "module": {
+                "name": "engine-munger/lib/expressView"
+            }
         }
+
     }
 
 }
