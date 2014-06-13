@@ -147,7 +147,7 @@ message=El tiempo es precioso...
 greeting=Hallo, {name}!
 message=Zeit ist kostbar...
 ```
-You may have already noticed that the reason we add the `.properies` files to `locales/` folder is because we set that as the `contentPath` in the i18n config above.
+You may have already noticed that we add the `.properies` files to `locales/` folder because we set the `contentPath` in the i18n config above as `locales/`.
 
 ### Checking the default locale translation in your app
 
@@ -199,11 +199,7 @@ That is it!!! You are done!
 
 ### See it working with different locales:
 
-1. Start the app:
-```
-$ node .
-```
-
+1. Start the app: ` $ node . `
 2. In your browser:
 ```
 localhost:8000/setLocale/en-US
@@ -212,11 +208,12 @@ localhost:8000/setLocale/es-ES
 (or)
 localhost:8000/setLocale/de-DE
 ```
+
 This will automatically set the locale and redirect to the index page in the right locale.
 
-3. Now if you would like to see it work in `production` mode with compiled templates:
+Now if you would like to see it work in `production` mode with compiled templates:
 
 * `$ grunt build`
-* `NODE_ENV=production node .`
+* `$ NODE_ENV=production node .`
 
-And repeat steps 1 and 2.
+And repeat 1 and 2.
