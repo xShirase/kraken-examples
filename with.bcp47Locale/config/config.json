@@ -63,7 +63,7 @@
             "enabled": true,
             "priority": 105,
             "module": {
-                "name": "localeResolver/lib/localeResolver",
+                "name": "localeresolver/lib/localeResolver",
                 "method": "requestHandler",
                 "arguments": [
                     ["path:../with.bcp47Locale/resources/BCP47LocaleMapping.json",
