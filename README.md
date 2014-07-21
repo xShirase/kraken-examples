@@ -1,9 +1,12 @@
 kraken-examples
 ===============
 
-**Example applications built with kraken-js v1.0.0-rc.3 candidate**
+These example applications are built with kraken-js v1.0.0.
 
-*Caution*: The kraken-js candidate v1.0.0-rc.3 is stable but we are still in the process of testing and fixing bugs. Since it is a release candidate, the examples are subject to change a bit in future.
+* [`with.bcp47Locale`](with.bcp47Locale) demonstrates changing locales based on language and region together.
+* [`with.i18n`](with.i18n) demonstrates basic internationalization.
+* [`with.passport`](with.passport) integrates passport into a Kraken app, showing how to configure non-trivial middleware.
+* [`with.shoppingcart`](with.shoppingcart) sets up a basic PayPal shopping cart
+* [`with.specialization`](with.specialization) demonstrates template specialization based on parameters from the application, for doing A/B tests and other page variations.
 
-
-
+There are instructions in each application for starting them and with the details of what they demonstrate.

@@ -1,34 +1,31 @@
 # with.bcp47Locale
 
-
-An example Kraken 1.0  app that uses configurable locale resolution rules to determine the locale of each request/response
- and handles bcp47 language and bcp47 locale tags.
+An example Kraken 1.0 app that uses configurable locale resolution rules to determine the locale of each request/response and handles bcp47 language and bcp47 locale tags.
 
 The supported locales in the sample are the country and languages:
 
-* country=ES  lang=en-US or es-ES
-* country=ER  lang=fr-FR
-* country=US  lang=en-US
+* `country=ES` and `lang=en-US` or `lang=es-ES`
+* `country=ER` and `lang=fr-FR`
+* `country=US` and `lang=en-US`
 
 
-To see it working with different locales:
+To see it working with different locales, start the app:
 
 ```
-Start the app:
-$ node .
+$ npm install
+$ npm start
+```
 
-In your browser:
-
-localhost:8000/template4MyLocale?country='iso 3166 country code'&lang='bcp47 language tag'
-
+In your browser, view [`http://localhost:8000/template4MyLocale?country=ES&lang=es-ES`](http://localhost:8000/template4MyLocale?country=ES&lang=es-ES) for Spanish Spanish in Spain, [`http://localhost:8000/template4MyLocale?country=ES&lang=en-US`](http://localhost:8000/template4MyLocale?country=ES&lang=en-US) for US English in Spain, [`http://localhost:8000/template4MyLocale?country=US&lang=en-US`](http://localhost:8000/template4MyLocale?country=US&lang=en-US) for US English in the US, or [`http://localhost:8000/template4MyLocale?country=ER&lang=fr-FR`](http://localhost:8000/template4MyLocale?country=ER&lang=fr-FR) for Parisian French in Eritrea.
 
 This will automatically set the locale and redirect to the index page in the right locale
 ```
-###What does the sample app demonstrate ?
 
-* [Setting up middleware to populate locale for each request](https://github.com/krakenjs/kraken-examples/blob/f23e9a5f859709a49d88f9742c127c143f027640/with.bcp47Locale/config/config.json#L62)
+### What does the sample app demonstrate ?
 
-* [Setting the locale in a response](https://github.com/krakenjs/kraken-examples/blob/f23e9a5f859709a49d88f9742c127c143f027640/with.bcp47Locale/lib/krakenlocale.js#L13)
+* [Setting up middleware to populate locale for each request](config/config.json#L62)
 
-* [Adding locale specific property files](https://github.com/krakenjs/kraken-examples/tree/master/with.bcp47Locale/locales)
+* [Setting the locale in a response](lib/krakenlocale.js#L13)
+
+* [Adding locale specific property files](locales)
 
