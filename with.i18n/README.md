@@ -152,8 +152,17 @@ You may have already noticed that we add the `.properies` files to `locales/` fo
 
 Now when you start the app by doing `$ node .` and point your browser to `localhost:8000` you will see `index.dust` rendered in the fallback locale `en-US` per our `i18n` config.
 
-### Adding a hook to set the locale on the fly
+### Configure your routes and locale handling
 
+* In `config/config.json` add the following to specify your main `routes` module:
+
+```javascript
+"router": {
+  "module": {
+     "arguments": [{ "index": "path:./routes" }]
+  }
+},
+```
 * In `controllers/index.js` add the following route handlers for the `/` route and the `/setLocale` route
 
 ```javascript
@@ -173,7 +182,7 @@ exports.setLocale = function (req, res) {
 
 ```
 
-* In your `routes.js` register the route handlers defined in `controllers`
+* In `routes.js` register the route handlers defined in `controllers`
 
 ```
 var controllers = require('./controllers');
@@ -185,7 +194,7 @@ module.exports = function (router) {
 ```
 
 
-* In your `config.json` add the following for setting the locale in the `res.locals`of your express app by reading it from cookie.
+* In `config/config.json` add the following for setting the locale in the `res.locals`of your express app by reading it from cookie.
 ```
 "locale": {
     "priority": 95,
