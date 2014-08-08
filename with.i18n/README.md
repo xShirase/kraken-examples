@@ -154,13 +154,34 @@ Now when you start the app by doing `$ node .` and point your browser to `localh
 
 ### Adding a hook to set the locale on the fly
 
-* In your `routes.js` add the following route and controller code
+* In `controllers/index.js` add the following route handlers for the `/` route and the `/setLocale` route
 
-```
-router.get('/setLocale/:locale', function (req, res) {
+```javascript
+'use strict';
+
+var IndexModel = require('../models/index');
+
+exports.index = function (req, res) {
+    var model = new IndexModel();
+    res.render('index', model);
+};
+
+exports.setLocale = function (req, res) {
     res.cookie('locale', req.params.locale);
     res.redirect('/');
-});
+};
+
+```
+
+* In your `routes.js` register the route handlers defined in `controllers`
+
+```
+var controllers = require('./controllers');
+
+module.exports = function (router) {
+    router.get('/', controllers.index);
+    router.get('/setLocale/:locale', controllers.setLocale);
+};
 ```
 
 
