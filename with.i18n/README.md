@@ -152,19 +152,49 @@ You may have already noticed that we add the `.properies` files to `locales/` fo
 
 Now when you start the app by doing `$ node .` and point your browser to `localhost:8000` you will see `index.dust` rendered in the fallback locale `en-US` per our `i18n` config.
 
-### Adding a hook to set the locale on the fly
+### Configure your routes and locale handling
 
-* In your `routes.js` add the following route and controller code
+* In `config/config.json` add the following to specify your main `routes` module:
 
+```javascript
+"router": {
+  "module": {
+     "arguments": [{ "index": "path:./routes" }]
+  }
+},
 ```
-router.get('/setLocale/:locale', function (req, res) {
+* In `controllers/index.js` add the following route handlers for the `/` route and the `/setLocale` route
+
+```javascript
+'use strict';
+
+var IndexModel = require('../models/index');
+
+exports.index = function (req, res) {
+    var model = new IndexModel();
+    res.render('index', model);
+};
+
+exports.setLocale = function (req, res) {
     res.cookie('locale', req.params.locale);
     res.redirect('/');
-});
+};
+
+```
+
+* In `routes.js` register the route handlers defined in `controllers`
+
+```
+var controllers = require('./controllers');
+
+module.exports = function (router) {
+    router.get('/', controllers.index);
+    router.get('/setLocale/:locale', controllers.setLocale);
+};
 ```
 
 
-* In your `config.json` add the following for setting the locale in the `res.locals`of your express app by reading it from cookie.
+* In `config/config.json` add the following for setting the locale in the `res.locals`of your express app by reading it from cookie.
 ```
 "locale": {
     "priority": 95,
